@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="277.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label layoutX="62.0" layoutY="30.0" style="-fx-background-color: blue; -fx-background-radius: 5;" text="choisi les symboles a utilisé" textFill="WHITE">
+         <effect>
+            <Glow level="1.0" />
+         </effect></Label>
+        <Button layoutX="118.0" layoutY="163.0" mnemonicParsing="false" onAction="#GetIt" style="-fx-background-color: red; -fx-background-radius: 50;" text="ok" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <ListView fx:id="listView" layoutX="57.0" layoutY="58.0" prefHeight="99.0" prefWidth="168.0" />
+    </children>
+</AnchorPane>

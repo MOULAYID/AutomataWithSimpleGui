@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="511.0" prefWidth="600.0" style="-fx-background-color: #3daeb8;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="table.Controller">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="1.0" layoutY="127.0" prefHeight="261.0" prefWidth="300.0">
+         <columns>
+            <TableColumn fx:id="etatCol" prefWidth="100.0" text="/" />
+            <TableColumn fx:id="col1Col" prefWidth="100.0" text="col1" />
+            <TableColumn fx:id="col2Col" prefWidth="100.0" text="col2" />
+         </columns>
+      </TableView>
+      <TextField fx:id="etatTF" layoutX="14.0" layoutY="431.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="413.0" prefWidth="70.0" text="etat" textFill="RED" underline="true">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <TextField fx:id="col1TF" layoutX="108.0" layoutY="431.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label fx:id="label1" alignment="CENTER" layoutX="108.0" layoutY="413.0" prefWidth="70.0" text="etat" textFill="RED" underline="true">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <TextField fx:id="col2TF" layoutX="203.0" layoutY="431.0" prefHeight="25.0" prefWidth="70.0" />
+      <Label fx:id="label2" alignment="CENTER" layoutX="203.0" layoutY="413.0" prefWidth="70.0" text="etat" textFill="RED" underline="true">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <Button layoutX="7.0" layoutY="475.0" mnemonicParsing="false" onAction="#ajouter" style="-fx-background-color: green;" text="ajouer au table" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.34" color="WHITE" radius="12.965" width="32.86" />
+         </effect></Button>
+      <Label layoutX="361.0" layoutY="42.0" text="initial :" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="490.0" layoutY="43.0" text="final :" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font></Label>
+      <Button layoutX="368.0" layoutY="285.0" mnemonicParsing="false" onAction="#dodo" prefHeight="40.0" prefWidth="137.0" style="-fx-background-color: #FF7F50;" text="Tester">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.53" height="12.1" radius="14.4475" width="47.69" />
+         </effect>
+      </Button>
+      <TextField fx:id="motTF" alignment="CENTER" layoutX="368.0" layoutY="219.0" promptText="saisi ici" />
+      <Separator layoutX="308.0" layoutY="3.0" orientation="VERTICAL" prefHeight="505.0" prefWidth="6.0" style="-fx-background-color: black;">
+         <effect>
+            <InnerShadow choke="0.43" color="WHITE" />
+         </effect>
+      </Separator>
+      <Label layoutX="338.0" layoutY="13.0" style="-fx-background-color: #00FF7F; -fx-background-radius: 10;" text="Choisi l'etat initial et les etats finaux">
+         <font>
+            <Font name="Andalus" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.22" height="0.0" radius="12.905" width="53.62" />
+         </effect>
+      </Label>
+      <Label layoutX="356.0" layoutY="189.0" style="-fx-background-color: #00FF7F; -fx-background-radius: 10;" text="Saisi le mot que tu veut tester">
+         <font>
+            <Font name="Andalus" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.22" height="0.0" radius="12.905" width="53.62" />
+         </effect>
+      </Label>
+      <Separator layoutX="5.0" layoutY="457.0" prefHeight="3.0" prefWidth="282.0" style="-fx-background-color: black;">
+         <effect>
+            <Glow />
+         </effect>
+      </Separator>
+      <Separator layoutX="331.0" layoutY="404.0" prefHeight="3.0" prefWidth="221.0" style="-fx-background-color: black;">
+         <effect>
+            <Glow />
+         </effect>
+      </Separator>
+      <Button layoutX="526.0" layoutY="482.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: red; -fx-background-radius: 100;" text="retour &gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <Label fx:id="result" alignment="CENTER" contentDisplay="CENTER" layoutX="352.0" layoutY="351.0" prefHeight="40.0" prefWidth="179.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="resultat" textAlignment="CENTER" textFill="#fc5c00" wrapText="true">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="initialLV" layoutX="353.0" layoutY="60.0" prefHeight="112.0" prefWidth="58.0" />
+      <ListView fx:id="finalLV" layoutX="476.0" layoutY="60.0" prefHeight="112.0" prefWidth="58.0" />
+      <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" layoutX="1.0" layoutY="98.0" lineSpacing="2.0" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: #B22222; -fx-background-radius: 5;" text="Table de transition" textFill="WHITE" underline="true" wrapText="true">
+         <font>
+            <Font name="Agency FB Bold" size="16.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <HBox layoutX="-1.0" layoutY="1.0" prefHeight="31.0" prefWidth="282.0" style="-fx-background-color: green;">
+         <children>
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#close" prefHeight="31.0" prefWidth="95.0" text="close" />
+            <Button defaultButton="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="95.0" text="reinitialiser" />
+            <Button defaultButton="true" layoutX="105.0" layoutY="10.0" mnemonicParsing="false" onAction="#showit" prefHeight="31.0" prefWidth="95.0" text="aide" />
+         </children>
+      </HBox>
+      <Button layoutX="145.0" layoutY="476.0" mnemonicParsing="false" onAction="#ajouter" onMouseClicked="#supp" style="-fx-background-color: green;" text="supprimer de table" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow choke="0.34" color="WHITE" radius="12.965" width="32.86" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
